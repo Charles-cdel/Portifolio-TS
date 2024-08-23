@@ -6,8 +6,8 @@ import EmailIcon from '@mui/icons-material/Email';
 
 const Hero = () => {
 
-  const StyledHero = styled("div")(()=>({
-    backgroundColor: "black",
+  const StyledHero = styled("div")(({theme})=>({
+    backgroundColor: theme.palette.primary.main,
     height: "100vh"
 
 
@@ -37,8 +37,8 @@ const Hero = () => {
 
         <Grid iten xs={12} md={8}>
 
-          <Typography color="primary" variant="h1" textAlign="center"> Carlos Alberto Carneiro </Typography>
-          <Typography color="primary" variant="h2" textAlign="center"> Sou Desenvolvedor FullStack </Typography>
+          <Typography color="primary.contrastText" variant="h1" textAlign="center"> Carlos Alberto Carneiro </Typography>
+          <Typography color="primary.contrastText" variant="h2" textAlign="center"> Sou Desenvolvedor FullStack </Typography>
 
           <Grid container display="flex" justifyContent="center">
 
