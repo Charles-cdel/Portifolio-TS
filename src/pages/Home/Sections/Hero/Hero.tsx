@@ -24,30 +24,48 @@ const Hero = () => {
     return (
       <>
        <StyledHero>
-        <Container>
+
+        <Container maxWidth="lg">
 
         <Grid container spacing={2}> 
-        <Grid iten xs={4}>
+
+        <Grid iten xs={12} md={4}>
 
         <StyledImg src= {FotoPerfil}/>
 
         </Grid>
 
-        <Grid iten xs={8}>
+        <Grid iten xs={12} md={8}>
 
-          <Typography color="Blue" variant="h1"> Carlos Alberto Carneiro </Typography>
-          <Typography color="Blue" variant="h2"> Sou Desenvolvedor FullStack </Typography>
+          <Typography color="primary" variant="h1" textAlign="center"> Carlos Alberto Carneiro </Typography>
+          <Typography color="primary" variant="h2" textAlign="center"> Sou Desenvolvedor FullStack </Typography>
 
-          <Button>
-          <DownloadIcon/>
-          Baixar CV
-          </Button>
-          <Button>
+          <Grid container display="flex" justifyContent="center">
+
+            <Grid iten xs={12} md={4} display="flex" justifyContent="center">
+
+              <Button>
+
+              <DownloadIcon/>
+
+              Baixar CV
+
+              </Button>
+
+            </Grid>
+
+            <Grid iten xs={12} md={4} display="flex" justifyContent="center">
+
+            <Button>
+
             <EmailIcon/>
             
             Contate-me
-            </Button>
 
+            </Button>
+              
+            </Grid>
+          </Grid>
 
         </Grid>
 
