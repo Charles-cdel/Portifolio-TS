@@ -1,8 +1,9 @@
-import {Container, Grid, styled, Typography } from "@mui/material"
+import {Box, Container, Grid, styled, Typography } from "@mui/material"
 import FotoPerfil from "../../../../assets/images/FotoPerfil.jpeg"
 import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
 import StyledButton from "../../../../Components/StyledButton/StyledButton";
+import { AnimatedBackground } from "../../../../Components/StyledButton/AnimatedBackground/AnimatedBackground";
 
 
 const Hero = () => {
@@ -34,17 +35,33 @@ const Hero = () => {
         <Grid container spacing={2}> 
 
         <Grid iten xs={12} md={5}>
+          <Box position="relative">
+            
+            <Box position="absolute" width={"150%"} top={-100} right={0}>
 
-        <StyledImg src= {FotoPerfil}/>
+              <AnimatedBackground/>
+
+            </Box>
+
+            <Box position ="relative" textAlign ="center">
+
+            <StyledImg src= {FotoPerfil}/>
+
+            </Box>
+            
+
+           
+          </Box>
+
 
         </Grid>
 
         <Grid iten xs={12} md={7}>
 
-          <Typography color="primary.contrastText" variant="h1" textAlign="center"> Carlos Alberto Carneiro </Typography>
+          <Typography color="primary.contrastText" variant="h1" textAlign="center" pb={2}> Carlos Alberto Carneiro </Typography>
           <Typography color="primary.contrastText" variant="h2" textAlign="center"> Sou Desenvolvedor FullStack </Typography>
 
-          <Grid container display="flex" justifyContent="center" gap={3}>
+          <Grid container display="flex" justifyContent="center" gap={3} pt={3}>
 
             <Grid iten xs={12} md={4} display="flex" justifyContent="center">
 
@@ -57,7 +74,6 @@ const Hero = () => {
 
               <Typography>
               Baixar CV
-
               </Typography>
 
               
